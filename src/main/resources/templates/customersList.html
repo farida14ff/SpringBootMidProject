@@ -1,0 +1,100 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Reading List</title>-->
+<!--    <link rel="stylesheet" th:href="@{/style.css}">-->
+<!--</head>-->
+
+<!--<body>-->
+<!--<h2> Your Reading List</h2>-->
+<!--<div th:unless="${#lists.isEmpty(books)}">-->
+<!--    <dl th:each="book : ${books}">-->
+<!--        <dt class="bookHeadline">-->
+<!--            <span th:text="${book.title}">Title</span> by-->
+<!--            <span th:text="${book.author}">Author</span>-->
+<!--            (ISBN: <span th:text="${book.isbn}">ISBN</span>)-->
+<!--        </dt>-->
+<!--        <dd class="bookDescription">-->
+<!--            <span th:if="${book.description}" th:text="${book.description}">Description</span>-->
+<!--            <span th:if="${book.description eq null}"> No description available</span>-->
+<!--        </dd>-->
+<!--    </dl>-->
+<!--</div>-->
+
+<!--<div th:if="${#lists.isEmpty(books)}">-->
+<!--    <p>You have no books in your book list</p>-->
+<!--</div>-->
+
+<!--</hr>-->
+
+
+
+<!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Customers</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+
+<body>
+<h2> List of customers</h2>
+<div th:unless="${#lists.isEmpty(customers)}">
+    <dl th:each="customers : ${customers}">
+        <dt class="customersHeadline">
+            <span th:text="${customers.first_name}">Name</span>
+            <span th:text="${customers.last_name}">Surname</span>
+            <span th:text="${customers.emailAddress}">Email</span>
+            <span th:text="${customers.jobTitle}">Job</span>
+            <span th:text="${customers.mobilePhone}">Mobile Phone</span>
+            <span th:text="${customers.city}">City</span>
+            <span th:text="${customers.webPage}">Web Page</span>
+    </dl>
+</div>
+
+<div th:if="${#lists.isEmpty(customers)}">
+    <p>No customers</p>
+</div>
+
+</hr>
+
+
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Customers</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+
+<body>
+<h2> List of customers</h2>
+<div th:unless="${#lists.isEmpty(customers)}">
+    <dl th:each="customers : ${customers}">
+        <dt class="customersHeadline">
+            <span th:text="${customers.first_name}">Name</span>
+            <span th:text="${customers.last_name}">Surname</span>
+            <span th:text="${customers.emailAddress}">Email</span>
+            <span th:text="${customers.jobTitle}">Job</span>
+            <span th:text="${customers.mobilePhone}">Mobile Phone</span>
+            <span th:text="${customers.city}">City</span>
+            <span th:text="${customers.webPage}">Web Page</span>
+    </dl>
+</div>
+
+<div th:if="${#lists.isEmpty(customers)}">
+    <p>No customers</p>
+</div>
+
+</hr>
+
+
+
+</body>
+</html>
