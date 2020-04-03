@@ -10,22 +10,32 @@ sourceCompatibility = '1.8'
 
 repositories {
     mavenCentral()
+    maven { url 'http://dl.bintray.com/vermeulen-mp/gradle-plugins' }
+
 }
 
 dependencies {
+    classpath "org.gradle.api.plugins:gradle-heroku:0.9.6"
     implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-jdbc'
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     runtimeOnly 'mysql:mysql-connector-java'
-//    implementation 'javax.xml.bind:jaxb-api:2.3.0-b170201.1204'
 
 
 
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
+}
+
+apply plugin: 'heroku'
+
+
+heroku {
+    apiKey = 'my-api-key'
+
 }
 
 test {
